@@ -2,7 +2,7 @@
 The program of word2vec for java, contains POS-CBOW and POS-Skip-gram
 * POS-CBOW
   The continue bag of word laugage model with part-of-speech.
-  (https://github.com/phylieac/Word2vec/blob/master/POS-CBOW.png)
+  ![image](https://github.com/phylieac/Word2vec/blob/master/POS-CBOW.png)
 # Usage
 
             Configuration conf=new Configuration();
