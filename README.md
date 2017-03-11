@@ -8,6 +8,8 @@ The program of word2vec for java, includes POS-CBOW and POS-Skip-gram
 * POS-Skipgram
    The POS-Skipgram language model with part-of-speech
   ![image](https://github.com/phylieac/Word2vec/blob/master/POS-Skipgram.png)
+
+
 # Usage
 
             Configuration conf=new Configuration();
