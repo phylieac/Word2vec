@@ -1,7 +1,6 @@
 /**
  * @author Hongyan Pan---Phy
  * Date:2014.9.27-----Optimized Memory Allocation,Boosting Training Task. 
- * Main Training Class,Using RNN in NLP.----(CBOW && Skip-gram) RNN Language Model.
  * Date:2014.10.3    Added Multi Threads.
  * Date:2014.10.8   If user used the class Configuration ,and Threads set <=0;the program change it to the processor number.
  * Data:2015.2        Added stopwords to extra the vector space 
@@ -831,7 +830,7 @@ public class Word2vec extends ThreadObject {
           /**
            * 训练任务
            */
-          public void TrainTask(Word2vec vec){      	  
+          public void train(){      	  
         	  log.info("Start to train  file: "+Train_File);
         	  LearnVocab();
         	  InitNN();
@@ -839,17 +838,17 @@ public class Word2vec extends ThreadObject {
         	  //调整内存分配
         	  InitExpTable();
         	  //ThreadsModel(0);
-        	  ThreadsExcute(Num_Threads, vec);
+        	  ThreadsExcute(Num_Threads, this);
         	 // SaveVector();
         	  
           }
           public static void main(String[] args){
         	  Configuration conf=new Configuration();
         	  conf.setCBOW(0);
-        	  conf.setThreads(2);
+        	  conf.setThreads(4);
         	  conf.setMiniCount(0);
         	  //Word2vec vectest=new Word2vec(args[0],args[1],conf);
-        	  Word2vec vectest=new Word2vec("corpus","./skipgram.bin",conf);
-        	  vectest.TrainTask(vectest);
+        	  Word2vec vectest=new Word2vec("text8","./skipgram.bin",conf);
+        	  vectest.train();
           }
 }
