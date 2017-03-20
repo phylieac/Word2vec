@@ -1,7 +1,6 @@
 /**
  * @author Hongyan Pan---Phy
  * Date:2014.9.27-----Optimized Memory Allocation,Boosting Training Task. 
- * Main Training Class,Using RNN in NLP.----(CBOW && Skip-gram) RNN Language Model.
  * Date:2014.10.3    Added Multi Threads.
  * Date:2014.10.8   If user used the class Configuration ,and Threads set <=0;the program change it to the processor number.
  * Data:2015.2        Added stopwords to extra the vector space 
