@@ -845,7 +845,7 @@ public class Word2vec extends ThreadObject {
           public static void main(String[] args){
         	  Configuration conf=new Configuration();
         	  conf.setCBOW(0);
-        	  conf.setThreads(4);
+        	  conf.setThreads(2);
         	  conf.setMiniCount(0);
         	  //Word2vec vectest=new Word2vec(args[0],args[1],conf);
         	  Word2vec vectest=new Word2vec("text8","./skipgram.bin",conf);

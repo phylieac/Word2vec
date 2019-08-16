@@ -17,7 +17,7 @@ The program of word2vec for java, includes POS-CBOW and POS-Skip-gram
             conf.setThreads(2);
             conf.setMiniCount(0);
             Word2vec vectest=new Word2vec("text8","./cbow.bin",conf);
-            vectest.TrainTask(vectest);
+            vectest.train();
 
 # License
   Apache Lisence 2.0
